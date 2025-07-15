@@ -3,7 +3,7 @@
 import { CardHoverEffectDemo } from "../ui/card"
 import Image from "next/image"
 import Footer from "./footer"
-import Navbar from "./navbar"
+import { Navbar } from "../navbar"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -65,9 +65,9 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-gradient-to-t from-[#1a0e05] via-[#0c0c0c] to-[#0c0c0c]">
       <Navbar />
-      <div className="min-h-screen bg-white dark:bg-black" style={{ marginLeft: "350px", marginRight: "350px" }}>
+      <div className="min-h-screen " style={{ marginLeft: "350px", marginRight: "350px" }}>
         <motion.section
           className="flex items-center justify-center text-black dark:text-white px-6 py-6"
           initial="hidden"
@@ -84,7 +84,7 @@ const HeroSection = () => {
                   transition: { duration: 0.2 },
                 }}
               >
-                Phoenix
+                Syntax
               </motion.h1>
               <motion.h2
                 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed"
@@ -144,79 +144,7 @@ const HeroSection = () => {
           </div>
         </motion.section>
 
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={ctaVariants}
-        >
-          <motion.div
-            className="max-w-6xl mb-6 bg-zinc-300 dark:bg-zinc-900 text-black dark:text-white rounded-xl shadow-lg py-8 text-center"
-            whileHover={{
-              scale: 1.02,
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-              transition: { duration: 0.3 },
-            }}
-          >
-            <motion.h1
-              className="text-2xl md:text-3xl font-bold leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              Let&apos;s create Something meaningful-work that stand out
-            </motion.h1>
-            <motion.p
-              className="text-gray-400 mt-2 text-sm md:text-base"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Freelance, full-time, or just vibing with an idea - I&apos;m all ears.
-            </motion.p>
-            <motion.div
-              className="mt-4 text-sm md:text-base text-gray-300 flex justify-center items-center gap-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <motion.span
-                animate={{
-                  x: [0, 5, 0],
-                  transition: {
-                    duration: 2,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                  },
-                }}
-              >
-                👉
-              </motion.span>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href={"mailto:youremail.com"}
-                  className="hover:underline underline-offset-4 text-white font-medium"
-                >
-                  Email me
-                </Link>
-              </motion.div>
-              <span>or</span>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href="https://twitter.com/dhruvtripathi77"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline underline-offset-4 text-white font-medium"
-                >
-                  Connect on Twitter
-                </Link>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </motion.section>
+
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -224,7 +152,6 @@ const HeroSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Footer />
         </motion.div>
       </div>
     </div>
