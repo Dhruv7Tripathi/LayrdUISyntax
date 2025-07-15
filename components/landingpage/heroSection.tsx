@@ -4,6 +4,8 @@ import { CardHoverEffectDemo } from "../ui/card"
 import { Navbar } from "../navbar"
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision"
 import { motion } from "framer-motion"
+import Image from "next/image"
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 const HeroSection = () => {
   const itemVariants = {
@@ -25,8 +27,8 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="">
-      <div className=" bg-gradient-to-t from-[#48270d] via-[#0c0c0c] to-[#0c0c0c]">
+    <div className="bg-gradient-to-t from-[#110b03] via-[#0c0c0c] to-[#181105]">
+      <div className="">
         <Navbar />
         <BackgroundBeamsWithCollision>
           <motion.section
@@ -54,10 +56,16 @@ const HeroSection = () => {
             </div>
           </motion.section>
         </BackgroundBeamsWithCollision>
-        <div className="relative z-10 h-180 w-320 border-b-2 border-neutral-800/50 bg-neutral-900/40 shadow-lg backdrop-blur-md mx-auto mt-8">
-          <div>
+        <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] border-b-2 border-neutral-800/50 bg-neutral-900/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden">
+          <Image
+            src="/hero.webp"
+            alt="Hero Image"
+            fill
+            className="object-cover rounded-lg shadow-amber-500"
+            priority
+          />
 
-          </div>
+          <BorderBeam className="absolute top-0 left-0 w-full h-full" />
         </div>
       </div>
 
