@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { Footer } from "./footer"
+import Footer from "./footer"
 import { Navbar } from "../navbar"
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision"
 import { motion, useReducedMotion } from "framer-motion"
@@ -10,7 +10,7 @@ import { BorderBeam } from "@/components/magicui/border-beam"
 import { Skills } from "./skills"
 import { PricingCard } from "../ui/dark-gradient-pricing"
 import { useEffect, useState } from "react"
-
+import PricingPage from "./pricing"
 const HeroSection = () => {
 
   const itemVariants = {
@@ -32,7 +32,7 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="bg-gradient-to-t from-[#110b03] via-[#0c0c0c] to-[#181105] relative ">
+    <div className="bg-white text-gray-900 relative ">
       {/* Animated Beams */}
       <Navbar />
 
@@ -42,7 +42,7 @@ const HeroSection = () => {
 
           {/* Hero Section */}
           <motion.section
-            className="flex items-center justify-center h-screen text-black dark:text-white"
+            className="flex items-center justify-center h-screen text-black "
             initial="hidden"
             animate="visible"
           >
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 <br />
                 with Cutting-Edge Solutions
               </motion.h1>
-              <motion.p className="max-w-4xl mx-auto font-medium text-primary md:text-xl" variants={itemVariants}>
+              <motion.p className="max-w-4xl mx-auto font-medium text-zinc-700 md:text-xl" variants={itemVariants}>
                 Lorem ipsum dolor Quasi enim illum quod odit veritatis fugit reprehenderit, neque, magnam quas officiis
                 inventore excepturi, deleniti earum hic voluptatum laudantium ratione omnis sit.
               </motion.p>
@@ -65,7 +65,7 @@ const HeroSection = () => {
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  className="border-b text-white px-6 py-3 font-semibold rounded-3xl hover:bg-white/10 transition duration-300"
+                  className="border-b text-zinc-700 px-6 py-3 font-semibold rounded-3xl hover:bg-white/10 transition duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -95,11 +95,11 @@ const HeroSection = () => {
               className="rounded-lg shadow-amber-500 object-cover"
               priority
             />
+            <BorderBeam className="absolute top-0 left-0 w-full h-full" />
             <div className="absolute bottom-0 left-0 h-[40px] w-full [background-image:linear-gradient(to_top,theme(colors.background)_60%,transparent_100%)]" />
           </div>
         </motion.div>
 
-        <BorderBeam className="absolute top-0 left-0 w-full h-full" />
         <div className="opacity-10 mb-5" />
       </div>
       <motion.div
@@ -129,7 +129,8 @@ const HeroSection = () => {
       </motion.section>
 
       {/* Pricing Section */}
-      <motion.section
+      <PricingPage />
+      {/* <motion.section
         className="relative overflow-hidden bg-[#0c0c0c] text-foreground"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -223,7 +224,7 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section> */}
       <Footer />
     </div>
   )

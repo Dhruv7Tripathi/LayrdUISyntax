@@ -40,7 +40,7 @@ const Navbar = () => {
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="text-black text-xl  hover:text-accent-foreground dark:text-white block duration-150">
+                      className="text-black text-xl  hover:text-accent-foreground  block duration-150">
                       <span>{item.name}</span>
                     </Link>
                   </li>
