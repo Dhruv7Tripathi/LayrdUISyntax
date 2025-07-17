@@ -24,7 +24,7 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "w-fullt ransition-all sticky top-0 z-50 duration-300",
+        "w-full transition-all sticky top-0 z-50 duration-300",
         isScrolled
           ? "border-b border-neutral-800/50 bg-neutral-900/40 shadow-lg backdrop-blur-md"
           : "border-transparent bg-transparent shadow-none backdrop-blur-none",
