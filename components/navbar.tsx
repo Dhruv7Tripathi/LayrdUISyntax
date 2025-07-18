@@ -26,7 +26,7 @@ export const Navbar = () => {
       className={cn(
         "w-full transition-all sticky top-0 z-50 duration-300",
         isScrolled
-          ? "border-b border-neutral-800/50 bg-neutral-900/40 shadow-lg backdrop-blur-md"
+          ? "border-b border-neutral-200/50 bg-neutral-200/40 shadow-lg backdrop-blur-md"
           : "border-transparent bg-transparent shadow-none backdrop-blur-none",
       )}
     >
@@ -34,11 +34,11 @@ export const Navbar = () => {
         <div className="flex items-center space-x-4">
           <div className="text-2xl ml-8 font-bold">Syntax</div>
         </div>
-        <div className="hidden md:flex text-sm justify-center items-center font-semibold text-primary space-x-6 flex-1">
-          <a href="#home" className="hover:text-blue-500">Home</a>
-          <a href="#about" className="hover:text-blue-500">About</a>
-          <a href="#services" className="hover:text-blue-500">Services</a>
-          <a href="#contact" className="hover:text-blue-500">Contact</a>
+        <div className="hidden text-gray-800 md:flex text-sm justify-center items-center font-semibold space-x-6 flex-1">
+          <a href="#home" className="">Home</a>
+          <a href="#about" className="">About</a>
+          <a href="#services" className="">Services</a>
+          <a href="#contact" className="">Contact</a>
         </div>
         <div className='flex items-center mr-6 ml-auto'>
           <div>
