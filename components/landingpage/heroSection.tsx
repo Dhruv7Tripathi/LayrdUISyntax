@@ -2,7 +2,7 @@
 
 import type React from "react"
 import Footer from "./footer"
-import { Navbar } from "../navbar"
+import { Navbar } from "./navbar"
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision"
 import { motion, useReducedMotion } from "framer-motion"
 import Image from "next/image"
@@ -32,7 +32,7 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="bg-white text-gray-900 relative ">
+    <div className="bg-white dark:bg-black dark:text-gray-100 text-gray-900 relative ">
       <Navbar />
 
 
@@ -40,7 +40,7 @@ const HeroSection = () => {
 
         {/* Hero Section */}
         <motion.section
-          className="flex items-center justify-center h-screen text-black "
+          className="flex items-center justify-center h-screen text-black dark:text-white"
           initial="hidden"
           animate="visible"
         >
@@ -120,7 +120,7 @@ const HeroSection = () => {
         <Skills />
       </motion.div>
       <motion.section
-        className="px-6 py-12 h-100 rounded-2xl pb-12 mb-12 w-300 border-2 border-neutral-200/50 bg-neutral-100/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex items-center justify-center"
+        className="px-6 py-12 h-100 rounded-2xl pb-12 mb-12 w-300 border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -128,111 +128,14 @@ const HeroSection = () => {
       >
         <div className="max-w-6xl w-full flex items-center justify-center">
           <motion.h2
-            className="text-5xl text-center md:text-4xl font-bold text-gray-800 leading-tight mb-6"
+            className="text-5xl text-center md:text-4xl font-bold text-gray-800 dark:text-gray-100leading-tight mb-6"
             variants={itemVariants}
           >
             Ready to take your project to the <span className="text-amber-500 font-serif">next level</span>?
           </motion.h2>
         </div>
       </motion.section>
-
-      {/* Pricing Section */}
       <PricingPage />
-      {/* <motion.section
-        className="relative overflow-hidden bg-[#0c0c0c] text-foreground"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 md:px-8">
-          <motion.div
-            className="mb-12 space-y-3"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-              Pricing
-            </h2>
-            <p className="text-center text-base text-muted-foreground md:text-lg">
-              Use it for free for yourself, upgrade when your team needs advanced control.
-            </p>
-          </motion.div>
-          <motion.div
-            className="grid grid-cols-1 gap-6 md:grid-cols-3"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, staggerChildren: 0.2 }}
-          >
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <PricingCard
-                tier="Free"
-                price="$0/mo"
-                bestFor="Best for 1-5 users"
-                CTA="Get started free"
-                benefits={[
-                  { text: "One workspace", checked: true },
-                  { text: "Email support", checked: true },
-                  { text: "1 day data retention", checked: false },
-                  { text: "Custom roles", checked: false },
-                  { text: "Priority support", checked: false },
-                  { text: "SSO", checked: false },
-                ]}
-              />
-            </motion.div>
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <PricingCard
-                tier="Pro"
-                price="$79/mo"
-                bestFor="Best for 5-50 users"
-                CTA="14-day free trial"
-                benefits={[
-                  { text: "Five workspaces", checked: true },
-                  { text: "Email support", checked: true },
-                  { text: "7 day data retention", checked: true },
-                  { text: "Custom roles", checked: true },
-                  { text: "Priority support", checked: false },
-                  { text: "SSO", checked: false },
-                ]}
-              />
-            </motion.div>
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <PricingCard
-                tier="Enterprise"
-                price="Contact us"
-                bestFor="Best for 50+ users"
-                CTA="Contact us"
-                benefits={[
-                  { text: "Unlimited workspaces", checked: true },
-                  { text: "Email support", checked: true },
-                  { text: "30 day data retention", checked: true },
-                  { text: "Custom roles", checked: true },
-                  { text: "Priority support", checked: true },
-                  { text: "SSO", checked: true },
-                ]}
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.section> */}
       <Footer />
     </div>
   )

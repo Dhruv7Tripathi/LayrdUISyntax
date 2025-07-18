@@ -1,72 +1,59 @@
-'use client'
+'use client';
 import React from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { useScroll, motion, useTransform } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Themetoggle } from '../ui/themetoggle';
+export const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-const menuItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Blogs', href: '/blogs' },
-  { name: 'Social', href: '#social' },
-]
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      return setIsScrolled(true);
+    }
 
-const Navbar = () => {
-  const [menuState, setMenuState] = React.useState(false)
+    return setIsScrolled(false);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header>
-      <nav
-        data-state={menuState && 'active'}
-        className="w-full px-2 group">
-        <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12')}>
-          <div className="relative flex text-xl mr-24 items-center justify-between w-full py-3 lg:py-4">
-            <div className='text-6xl px-16 ml-16 font-bold'>
-              <Themetoggle />
-            </div>
-            <div className="flex w-full lg:w-auto justify-end">
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
-                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                <Menu className="in-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-              </button>
-            </div>
-
-            <div className="hidden lg:block ml-auto">
-              <ul className="flex gap-8 text-sm">
-                {menuItems.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="text-black text-xl  hover:text-accent-foreground  block duration-150">
-                      <span>{item.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-background group-data-[state=active]:block lg:group-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-              <div className="lg:hidden justify-end">
-                <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-black justify-end dark:text-white hover:text-accent-foreground block duration-150">
-                        <span>{item.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+    <nav
+      className={cn(
+        "w-full transition-all sticky top-0 z-50 duration-300",
+        isScrolled
+          ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-neutral-900/40 shadow-lg backdrop-blur-md"
+          : "border-transparent bg-transparent shadow-none backdrop-blur-none",
+      )}
+    >
+      <div className="container flex items-center justify-between mx-auto px-4 py-3">
+        <div className="flex items-center space-x-4">
+          <div className="text-2xl ml-8 font-bold">Syntax</div>
+        </div>
+        <div className="hidden text-gray-800 dark:text-gray-200 md:flex text-sm justify-center items-center font-semibold space-x-6 flex-1">
+          <a href="#home" className="">Home</a>
+          <a href="#about" className="">About</a>
+          <a href="#services" className="">Services</a>
+          <a href="#contact" className="">Contact</a>
+        </div>
+        <div className='flex items-center mr-6 ml-auto'>
+          <div>
+            <Themetoggle />
+          </div>
+          <div className='ml-4 flex space-x-4 '>
+            <button className='dark:hover:bg-neutral-900 hover:bg-neutral-200 rounded-4xl py-2 px-2 '>
+              Login
+            </button>
+            <button className='bg-orange-500 text-white px-4 py-2 rounded-4xl hover:bg-orange-600'>
+              Sign Up
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
-  )
-}
-export default Navbar
+      </div>
+    </nav>
+  );
+};

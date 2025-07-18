@@ -222,7 +222,7 @@ const linkVariants = {
 
 export default function Footer() {
   return (
-    <footer className="relative border-b bg-white text-gray-900 overflow-hidden">
+    <footer className="relative border-b bg-white dark:bg-black dark:text-gray-100 text-gray-900 overflow-hidden">
       {/* Background watermark */}
       <div className=" inset-0 flex items-center justify-center ">
         <motion.div
@@ -251,7 +251,7 @@ export default function Footer() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="flex items-center space-x-3 mb-6"
             >
-              <div className="w-10 h-10 bg-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
+              <div className="w-10 h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
                 S
               </div>
               <span className="text-2xl font-bold">Syntax</span>
@@ -263,7 +263,7 @@ export default function Footer() {
 
           {/* Pages */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900">Pages</h3>
+            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Pages</h3>
             <ul className="space-y-3">
               {footerLinks.pages.map((link, index) => (
                 <motion.li
@@ -275,7 +275,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -286,7 +286,7 @@ export default function Footer() {
 
           {/* Socials */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900">Socials</h3>
+            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Socials</h3>
             <ul className="space-y-3">
               {footerLinks.socials.map((link, index) => (
                 <motion.li
@@ -298,7 +298,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -311,7 +311,7 @@ export default function Footer() {
 
           {/* Legal */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900">Legal</h3>
+            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link, index) => (
                 <motion.li
@@ -323,7 +323,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -334,7 +334,7 @@ export default function Footer() {
 
           {/* Register */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900">Register</h3>
+            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Register</h3>
             <ul className="space-y-3">
               {footerLinks.register.map((link, index) => (
                 <motion.li
@@ -346,7 +346,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>

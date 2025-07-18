@@ -52,10 +52,10 @@ export default function PricingPage() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-100 text-gray-900 mb-4">
             <span className="text-orange-500">Simple</span> Pricing for Everyone
           </h1>
-          <p className="text-gray-950 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-950 dark:text-gray-100 text-lg max-w-2xl mx-auto">
             Here, we are going to make the middle one much more attractive than the rest of the pricing tiers so you buy
             what we want you to buy
           </p>
@@ -68,15 +68,15 @@ export default function PricingPage() {
             >
               <Card
                 className={`h-full ${plan.featured
-                  ? "border-6 border-orange-400 shadow-2xl bg-white"
-                  : "border-3 border-gray-600 shadow-lg bg-white"} rounded-4xl transition-transform duration-300"
+                  ? "border-6 border-orange-400 shadow-2xl bg-white dark:bg-gray-900"
+                  : "border-3 border-gray-600 shadow-lg bg-white dark:bg-gray-900"} rounded-4xl transition-transform duration-300"
                   }`}
               >
                 <CardHeader className="text-center pb-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{plan.name}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">{plan.name}</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
-                    <span className="text-gray-600 ml-1">/month</span>
+                    <span className="text-4xl font-bold text-gray-900 dark:text-gray-100">${plan.price}</span>
+                    <span className="text-gray-600 dark:text-gray-100 ml-1">/month</span>
                   </div>
                   <Button
                     className="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 text-base font-medium"
@@ -92,7 +92,7 @@ export default function PricingPage() {
                       <li key={featureIndex} className="flex items-start gap-3">
                         <div className="flex-shrink-0 mt-0.5">
                           <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center">
-                            <Check className="w-3 h-3 text-white stroke-[3]" />
+                            <Check className="w-3 h-3 text-black dark:text-white stroke-[3]" />
                           </div>
                         </div>
                         <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
