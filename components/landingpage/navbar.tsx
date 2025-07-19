@@ -42,10 +42,10 @@ export const Navbar = () => {
           <span className="text-2xl font-bold">Syntax</span>
         </motion.div>
         <div className="hidden text-gray-800 dark:text-gray-200 md:flex text-sm justify-center items-center font-semibold space-x-6 flex-1">
-          <a href="#home" className="">Home</a>
-          <a href="#about" className="">About</a>
-          <a href="#services" className="">Services</a>
-          <a href="#contact" className="">Contact</a>
+          <a href="#home" className="hover:text-orange-400">Home</a>
+          <a href="#about" className="hover:text-orange-400">About</a>
+          <a href="#services" className="hover:text-orange-400">Services</a>
+          <a href="#contact" className="hover:text-orange-400">Contact</a>
         </div>
         <div className='flex items-center mr-6 ml-auto'>
           <div>

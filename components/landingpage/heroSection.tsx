@@ -87,7 +87,7 @@ const HeroSection = () => {
           <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60 shadow-2xl backdrop-blur-md mx-auto mt-8 overflow-hidden">
             <Image src="/hero.webp"
               alt="AI-powered SaaS Dashboard"
-              fill className="rounded-lg object-cover"
+              fill className="rounded-3xl object-cover"
               priority
             />
             <BorderBeam className="absolute top-0 left-0 w-full h-full z-30" />
