@@ -1,35 +1,27 @@
 
-
-import { Zap, Cpu, Fingerprint, Pencil, Settings2, Sparkles } from 'lucide-react';
-export const features = [
+export const faqData = [
   {
-    title: 'Faaast',
-    icon: Zap,
-    description: 'It supports an entire helping developers and innovate.',
+    question: "What is the purpose of this website?",
+    answer: "This website helps users discover and buy the best products curated from multiple sources.",
   },
   {
-    title: 'Powerful',
-    icon: Cpu,
-    description: 'It supports an entire helping developers and businesses.',
+    question: "How do I contact support?",
+    answer: "You can contact support via our support page or by emailing support@example.com.",
   },
   {
-    title: 'Security',
-    icon: Fingerprint,
-    description: 'It supports an helping developers businesses.',
+    question: "How do I find the best products?",
+    answer: "We use smart filtering and user reviews to show you top-rated products.",
   },
   {
-    title: 'Customization',
-    icon: Pencil,
-    description: 'It supports helping developers and businesses innovate.',
+    question: "Can I return a product?",
+    answer: "Yes, we offer hassle-free returns within 30 days of delivery.",
   },
   {
-    title: 'Control',
-    icon: Settings2,
-    description: 'It supports helping developers and businesses innovate.',
+    question: "Do you offer international shipping?",
+    answer: "Yes, we ship to over 50 countries. Shipping rates vary by location.",
   },
   {
-    title: 'Built for AI',
-    icon: Sparkles,
-    description: 'It supports helping developers and businesses innovate.',
+    question: "How can I track my order?",
+    answer: "Once shipped, you'll receive a tracking number via email.",
   },
-];
+]

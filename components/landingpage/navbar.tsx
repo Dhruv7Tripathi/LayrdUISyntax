@@ -31,9 +31,16 @@ export const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between mx-auto px-4 py-3">
-        <div className="flex items-center space-x-4">
-          <div className="text-2xl ml-8 font-bold">Syntax</div>
-        </div>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="flex items-center space-x-3"
+        >
+          <div className="w-10 h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
+            S
+          </div>
+          <span className="text-2xl font-bold">Syntax</span>
+        </motion.div>
         <div className="hidden text-gray-800 dark:text-gray-200 md:flex text-sm justify-center items-center font-semibold space-x-6 flex-1">
           <a href="#home" className="">Home</a>
           <a href="#about" className="">About</a>
