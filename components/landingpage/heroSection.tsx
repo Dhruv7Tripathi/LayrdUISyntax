@@ -111,37 +111,62 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.section
-        className="px-6 py-12 h-100 rounded-2xl pb-12 mb-12 w-300 border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex items-center justify-center relative"
+        className="px-6 py-12 rounded-2xl mb-12 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={sectionVariants}
       >
-        {/* Section glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-r dark:from-gray-700 from-gray-100 via-gray-200 dark:via-gray-800 to-gray-300 dark:to-gray-900 rounded-2xl" />
+        {/* Section glow effect background layer */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900 rounded-2xl pointer-events-none z-0" />
 
-        <div className="max-w-6xl w-full flex items-center justify-center relative z-10">
+        <div className="w-full flex flex-col items-center justify-center relative z-10 text-center">
           <motion.h2
-            className="text-5xl text-center md:text-4xl font-bold text-gray-800 dark:text-gray-100 leading-tight mb-6"
+            className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight mb-6"
             variants={itemVariants}
           >
             Ready to take your project to the{" "}
-            <span className="text-amber-500 font-serif relative">
+            <span className="text-amber-500 font-serif relative inline-block">
               next level
               <motion.div
                 className="absolute -inset-2 bg-amber-500/20 blur-lg rounded-lg -z-10"
-                animate={{
-                  opacity: [0.2, 0.4, 0.2],
-                }}
+                animate={{ opacity: [0.2, 0.4, 0.2] }}
                 transition={{
                   duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
+                  repeat: Infinity,
                   ease: "easeInOut",
                 }}
               />
             </span>
             ?
           </motion.h2>
+
+          <motion.p
+            className="text-gray-600 dark:text-gray-300 text-xl max-w-2xl mx-auto mb-8"
+            variants={itemVariants}
+          >
+            Join thousands of satisfied users who have transformed their workflows with our AI-powered SaaS solution.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-wrap justify-center items-center gap-6"
+            variants={itemVariants}
+          >
+            <motion.button
+              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full hover:bg-white/10 transition duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Us
+            </motion.button>
+            <motion.button
+              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full hover:bg-white/10 transition duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Learn More
+            </motion.button>
+          </motion.div>
         </div>
       </motion.section>
 

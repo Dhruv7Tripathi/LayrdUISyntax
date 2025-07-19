@@ -4,38 +4,51 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { IconChevronDown } from "@tabler/icons-react"
 import { faqData } from "@/contants"
-const FAQItem = ({ question, answer, isOpen, onToggle, index }: any) => {
+interface FAQItemProps {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  index?: number;
+}
+
+const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.2 }}
       className="border-b border-white/10"
+      layout // ✅ smooth outer layout animation
     >
       <motion.button
         onClick={onToggle}
-        className="w-full py-4 text-left flex items-center justify-between"
-        whileHover={{ opacity: 0.8 }}
+        className="w-full py-4 text-left flex items-center justify-between transition-colors duration-300 group"
+        whileHover={{ opacity: 0.9 }}
       >
-        <span className="text-white font-medium">{question}</span>
+        <span className="text-white font-medium group-hover:text-orange-500 transition-colors">
+          {question}
+        </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="flex-shrink-0 text-white"
+          className="flex-shrink-0 text-white group-hover:text-orange-500 transition-colors"
         >
           <IconChevronDown size={20} />
         </motion.div>
       </motion.button>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            key="faq-answer"
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden text-sm text-gray-400 pb-4"
+            className="overflow-hidden text-sm text-gray-400 pb-4 px-1"
           >
             {answer}
           </motion.div>
@@ -56,17 +69,15 @@ export const FAQSection = () => {
   return (
     <section className="bg-black text-white py-20 px-6 sm:px-12">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Left Heading */}
         <div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-            Frequently Asked <br /> Questions
+            Frequently {" "}
+            <span className="text-orange-500 font-serif">
+              Asked
+            </span>
+            <br /> Questions
           </h2>
-          <p>
-
-          </p>
         </div>
-
-        {/* Right FAQ List */}
         <div className="space-y-4">
           {faqData.map((faq, index) => (
             <FAQItem

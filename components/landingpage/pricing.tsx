@@ -61,7 +61,7 @@ export default function PricingPage() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <div
               key={plan.name}
               className={`relative ${plan.featured ? "transform md:scale-105 z-10" : "transform md:scale-95"}`}

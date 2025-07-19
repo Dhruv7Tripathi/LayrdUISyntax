@@ -36,7 +36,6 @@ const reviews = [
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
 
 const TechCard = ({ name, icon }: { name: string; icon: React.ReactNode }) => {
   return (

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useScroll, motion, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Themetoggle } from '../ui/themetoggle';

@@ -73,7 +73,7 @@ export default function Footer() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.03, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="text-[20rem] mt-24 font-bold dark:text-amber-200 text-zinc-900"
+          className="text-[20rem] font-bold dark:text-gray-100 text-zinc-900"
           style={{ lineHeight: 1, opacity: 0.1 }}
         >
           Syntax
@@ -119,7 +119,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -142,7 +142,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500  transition-colors duration-200 text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -167,7 +167,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -190,7 +190,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-gray-800 hover:text-gray-800 transition-colors duration-200 text-sm"
+                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
