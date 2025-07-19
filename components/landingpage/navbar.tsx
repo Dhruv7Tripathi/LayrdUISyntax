@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Themetoggle } from '../ui/themetoggle';
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 

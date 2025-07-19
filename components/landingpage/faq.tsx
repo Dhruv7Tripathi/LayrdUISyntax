@@ -27,13 +27,13 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
         className="w-full py-4 text-left flex items-center justify-between transition-colors duration-300 group"
         whileHover={{ opacity: 0.9 }}
       >
-        <span className="text-white font-medium group-hover:text-orange-500 transition-colors">
+        <span className="dark:text-white text-gray-900 font-medium group-hover:text-orange-500 transition-colors">
           {question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="flex-shrink-0 text-white group-hover:text-orange-500 transition-colors"
+          className="flex-shrink-0 dark:text-white text-gray-900 group-hover:text-orange-500 transition-colors"
         >
           <IconChevronDown size={20} />
         </motion.div>
