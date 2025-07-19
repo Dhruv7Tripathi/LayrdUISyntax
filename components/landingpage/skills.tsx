@@ -47,7 +47,7 @@ const TechCard = ({ name, icon }: { name: string; icon: React.ReactNode }) => {
     >
       <div className="flex items-center gap-3">
         <div className="text-black dark:text-white">{icon}</div>
-        <p className="text-sm font-medium text-black dark:text-white">
+        <p className="text-sm font-medium text-black dark:text-neutral-500">
           {name}
         </p>
       </div>

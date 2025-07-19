@@ -42,7 +42,7 @@ const HeroSection = () => {
               with Cutting-Edge Solutions
             </motion.h1>
             <motion.p
-              className="max-w-4xl mx-auto font-medium text-zinc-700 dark:text-zinc-200 md:text-xl"
+              className="max-w-4xl mx-auto font-medium text-zinc-700 dark:text-neutral-500 md:text-xl"
               variants={itemVariants}
             >
               Meet our AI-powered SaaS solution to lighten your workload, increase efficiency and make more accurate
@@ -83,7 +83,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative"
         >
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1200px] h-[100px] bg-amber-600/50 blur-[100px] -z-10" />
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1150px] h-[100px] bg-amber-600 blur-[100px] -z-10" />
           <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60  backdrop-blur-md mx-auto mt-8 overflow-hidden">
             <Image src="/hero.webp"
               alt="AI-powered SaaS Dashboard"
@@ -117,7 +117,8 @@ const HeroSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         variants={sectionVariants}
       >
-        {/* Section glow effect background layer */}
+        {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1200px] h-[10px] bg-amber-600 blur-[10px] z-5" /> */}
+
         <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900 rounded-2xl pointer-events-none z-0" />
 
         <div className="w-full flex flex-col items-center justify-center relative z-10 text-center">
