@@ -7,6 +7,7 @@ import { BorderBeam } from "@/components/magicui/border-beam"
 import { Skills } from "./skills"
 import PricingPage from "./pricing"
 import { FAQSection } from "./faq"
+import { Process } from "./testimonial"
 const HeroSection = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -100,6 +101,7 @@ const HeroSection = () => {
         <div className="opacity-10 mb-5" />
       </div>
 
+
       <motion.div
         className="mt-12 p-12 mb-12 opacity-55"
         initial={{ opacity: 0 }}
@@ -109,6 +111,7 @@ const HeroSection = () => {
       >
         <Skills />
       </motion.div>
+      <Process />
 
       <motion.section
         className="px-6 py-12 rounded-2xl mb-12 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
