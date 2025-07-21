@@ -35,11 +35,11 @@ const PROCESS_PHASES = [
 
 const Process = () => {
   return (
-    <div className="container min-h-svh place-content-center  bg-white dark:bg-black dark:text-gray-100 text-gray-900 xl:px-12">
+    <div className="container   min-h-svh place-content-center  bg-white dark:bg-black dark:text-gray-100 text-gray-900 xl:px-12">
       <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12">
-        <div className="left-0 top-0 md:sticky md:h-svh md:py-12">
-          <h2 className="mb-6 mt-4 text-4xl font-bold tracking-tight">
-            Planning your{" "}
+        <div className="left-0 top-0 ml-24 md:sticky md:h-svh md:py-12">
+          <h2 className="mb-6 text-4xl font-bold tracking-tight">
+            Planning your {" "}
             <span className="text-orange-400">project development</span> journey
           </h2>
           <p className="max-w-prose text-sm">
@@ -49,12 +49,12 @@ const Process = () => {
             phase sets the stage for all that follows.
           </p>
         </div>
-        <ContainerScroll className="min-h-[400vh] space-y-8 py-12">
+        <ContainerScroll className="space-y-8 mr-20 py-12">
           {PROCESS_PHASES.map((phase, index) => (
             <CardSticky
               key={phase.id}
               index={index + 2}
-              className="rounded-2xl border p-8 shadow-md backdrop-blur-md"
+              className="rounded-2xl border p-8 shadow-md backdrop-blur-lg mr-20"
             >
               <div className="flex items-center justify-between gap-4">
                 <h2 className="my-6 text-2xl font-bold tracking-tighter">

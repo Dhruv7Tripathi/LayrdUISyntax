@@ -35,7 +35,7 @@ export const Navbar = () => {
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="flex items-center space-x-3"
+          className="flex items-center ml-24 space-x-3"
         >
           <div className="w-10 h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
             S
@@ -52,7 +52,7 @@ export const Navbar = () => {
           <div>
             <Themetoggle />
           </div>
-          <div className='ml-4 flex space-x-4 '>
+          <div className='ml-4 flex space-x-4 mr-20 '>
             <button className='dark:hover:bg-neutral-900 hover:bg-neutral-200 rounded-4xl py-2 px-2 '>
               Login
             </button>

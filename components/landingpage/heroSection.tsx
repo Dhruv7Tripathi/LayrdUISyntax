@@ -130,10 +130,10 @@ const HeroSection = () => {
             variants={itemVariants}
           >
             Ready to take your project to the{" "}
-            <span className="text-amber-500 font-serif relative inline-block">
+            <span className="text-orange-400 font-serif relative inline-block">
               next level
               <motion.div
-                className="absolute -inset-2 bg-amber-500/20 blur-lg rounded-lg -z-10"
+                className="absolute -inset-2 bg-orange-400/20 blur-lg rounded-lg -z-10"
                 animate={{ opacity: [0.2, 0.4, 0.2] }}
                 transition={{
                   duration: 2,
@@ -157,14 +157,14 @@ const HeroSection = () => {
             variants={itemVariants}
           >
             <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full hover:bg-white/10 transition duration-300"
+              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full  transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Contact Us
             </motion.button>
             <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full hover:bg-white/10 transition duration-300"
+              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full  duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
