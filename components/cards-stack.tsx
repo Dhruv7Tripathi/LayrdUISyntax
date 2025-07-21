@@ -54,7 +54,7 @@ const CardSticky = React.forwardRef<HTMLDivElement, CardStickyProps>(
           backfaceVisibility: "hidden",
           ...style,
         }}
-        className={cn("sticky", className)}
+        className={cn("sticky top-0.5 -translate-y-0.5", className)}
         {...props}
       >
         {children}

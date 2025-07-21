@@ -3,7 +3,6 @@ import Footer from "./footer"
 import { Navbar } from "./navbar"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { BorderBeam } from "@/components/magicui/border-beam"
 import { Skills } from "./skills"
 import PricingPage from "./pricing"
 import { FAQSection } from "./faq"
@@ -91,7 +90,6 @@ const HeroSection = () => {
               fill className="rounded-3xl object-cover"
               priority
             />
-            <BorderBeam className="absolute top-0 left-0 w-full h-full z-30" />
             <div className="absolute bottom-0 left-0 h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
           </div>
 

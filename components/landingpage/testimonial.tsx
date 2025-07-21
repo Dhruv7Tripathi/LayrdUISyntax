@@ -37,10 +37,10 @@ const Process = () => {
   return (
     <div className="container   min-h-svh place-content-center  bg-white dark:bg-black dark:text-gray-100 text-gray-900 xl:px-12">
       <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12">
-        <div className="left-0 top-0 ml-24 md:sticky md:h-svh md:py-12">
-          <h2 className="mb-6 text-4xl font-bold tracking-tight">
+        <div className="sticky top-1/2 -translate-y-1/2 self-start ml-28">
+          <h2 className="mb-6 mt-24 text-4xl font-bold tracking-tight">
             Planning your {" "}
-            <span className="text-orange-400">project development</span> journey
+            <span className="text-orange-400 font-serif">Project Development</span> journey
           </h2>
           <p className="max-w-prose text-sm">
             Our journey begins with a deep dive into your vision. In the
@@ -49,12 +49,12 @@ const Process = () => {
             phase sets the stage for all that follows.
           </p>
         </div>
-        <ContainerScroll className="space-y-8 mr-20 py-12">
+        <ContainerScroll className="h-screen-[100] space-y-8 mr-20 py-12">
           {PROCESS_PHASES.map((phase, index) => (
             <CardSticky
               key={phase.id}
               index={index + 2}
-              className="rounded-2xl border p-8 shadow-md backdrop-blur-lg mr-20"
+              className="rounded-2xl border p-8 shadow-md backdrop-blur-2xl mr-20"
             >
               <div className="flex items-center justify-between gap-4">
                 <h2 className="my-6 text-2xl font-bold tracking-tighter">
