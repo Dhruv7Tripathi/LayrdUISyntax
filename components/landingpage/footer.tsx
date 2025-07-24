@@ -30,7 +30,7 @@ const footerLinks = {
 }
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+
   visible: {
     opacity: 1,
     transition: {
@@ -82,12 +82,10 @@ export default function Footer() {
 
       <motion.div
         variants={containerVariants}
-        initial="hidden"
         whileInView="visible"
         className="relative z-10 max-w-7xl mx-auto px-6 py-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
-          {/* Logo and Copyright */}
           <motion.div variants={itemVariants} className="lg:col-span-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -104,7 +102,6 @@ export default function Footer() {
             </motion.p>
           </motion.div>
 
-          {/* Pages */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Pages</h3>
             <ul className="space-y-3">
@@ -127,7 +124,6 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Socials */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Socials</h3>
             <ul className="space-y-3">
@@ -152,7 +148,6 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Legal */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Legal</h3>
             <ul className="space-y-3">
@@ -175,7 +170,6 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Register */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Register</h3>
             <ul className="space-y-3">

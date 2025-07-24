@@ -49,7 +49,7 @@ const Process = () => {
             phase sets the stage for all that follows.
           </p>
         </div>
-        <ContainerScroll className="h-screen-[100] space-y-8 mr-20 py-12">
+        <ContainerScroll className="min-h-[200vh] space-y-8 mr-20 py-12">
           {PROCESS_PHASES.map((phase, index) => (
             <CardSticky
               key={phase.id}

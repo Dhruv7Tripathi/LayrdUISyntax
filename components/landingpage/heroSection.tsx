@@ -7,6 +7,8 @@ import { Skills } from "./skills"
 import PricingPage from "./pricing"
 import { FAQSection } from "./faq"
 import { Process } from "./testimonial"
+import { ChevronRight } from 'lucide-react';
+import { Button } from "../ui/button"
 const HeroSection = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -56,13 +58,25 @@ const HeroSection = () => {
               >
                 Start Free Trial
               </motion.button>
-              <motion.button
-                className="border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 px-6 py-3 font-semibold rounded-3xl hover:bg-white/10 transition duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                Book a Demo
-              </motion.button>
+                <Button
+                  size="lg"
+                  className="text-base w-full sm:w-auto bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
+                >
+                  {/* <Link href="#demo" className="flex items-center"> */}
+                  Start a Demo
+                  <motion.span
+                    whileHover={{ x: 4 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <ChevronRight className="ml-2 size-4 text-amber-400 transition-transform group-hover:translate-x-1" />
+                  </motion.span>
+                  {/* </Link> */}
+                </Button>
+              </motion.div>
             </motion.div>
             <motion.div
               className="m-4 p-4 bottom-4 w-full z-20 text-center text-sm text-gray-800 dark:text-gray-200"
