@@ -1,41 +1,44 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
 import {
-  IconBrandNextjs,
-  IconBrandNodejs,
-  IconBrandReact,
-  IconBrandTailwind,
+  IconBrandWalmart,
+  IconBrandGoogle,
+  IconBrandApple,
+  IconBrandAirbnb,
+  IconBrandAdobe,
+  IconBrandBlackberry
 } from "@tabler/icons-react";
 import { SiExpress, SiMongodb } from "react-icons/si";
 
 const reviews = [
   {
-    name: "Next.js",
-    icon: <IconBrandNextjs size={55} />,
+    name: "Google",
+    icon: <IconBrandGoogle size={55} />,
   },
   {
-    name: "React",
-    icon: <IconBrandReact size={55} />,
+    name: "Apple",
+    icon: <IconBrandApple size={55} />,
   },
   {
-    name: "Node.js",
-    icon: <IconBrandNodejs size={55} />,
+    name: "Walmart",
+    icon: <IconBrandWalmart size={55} />,
   },
   {
-    name: "Tailwind CSS",
-    icon: <IconBrandTailwind size={55} />,
+    name: "Airbnb",
+    icon: <IconBrandAirbnb size={55} />,
   },
   {
-    name: "MongoDB",
-    icon: <SiMongodb size={55} />,
+    name: "Adobe",
+    icon: <IconBrandAdobe size={55} />,
   },
   {
-    name: "Express.js",
-    icon: <SiExpress size={55} />,
+    name: "Blackberry",
+    icon: <IconBrandBlackberry size={55} />,
   },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
+// const firstRow = reviews.slice(0, reviews.length / 2);
+const firstRow = reviews;
 
 const TechCard = ({ name, icon }: { name: string; icon: React.ReactNode }) => {
   return (
@@ -47,7 +50,7 @@ const TechCard = ({ name, icon }: { name: string; icon: React.ReactNode }) => {
     >
       <div className="flex items-center gap-3">
         <div className="text-black dark:text-white">{icon}</div>
-        <p className="text-sm font-medium text-black dark:text-neutral-500">
+        <p className="text-xl font-medium text-black dark:text-neutral-500">
           {name}
         </p>
       </div>

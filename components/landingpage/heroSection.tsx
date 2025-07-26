@@ -115,7 +115,7 @@ const HeroSection = () => {
 
 
       <motion.div
-        className="mt-12 p-12 mb-12 opacity-55"
+        className="mt-16 p-12 mb-24 opacity-55"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.55 }}
         viewport={{ once: true }}
