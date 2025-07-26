@@ -79,7 +79,7 @@ export default function PricingPage() {
                     <span className="text-gray-600 dark:text-gray-100 ml-1">/month</span>
                   </div>
                   <Button
-                    className="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 text-base font-medium"
+                    className="w-full bg-gray-800 dark:bg-gray-700  hover:bg-gray-900 text-white py-3 text-base font-medium"
                     size="lg"
                   >
                     Get Started
@@ -95,7 +95,7 @@ export default function PricingPage() {
                             <Check className="w-3 h-3 text-black dark:text-white stroke-[3]" />
                           </div>
                         </div>
-                        <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
+                        <span className="text-gray-600 dark:text-neutral-300 text-sm leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>

@@ -99,9 +99,9 @@ const HeroSection = () => {
         >
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1150px] h-[100px] bg-amber-600 blur-[100px] -z-10" />
           <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60  backdrop-blur-md mx-auto mt-8 overflow-hidden">
-            <Image src="/hero.webp"
+            <Image src="/l.webp"
               alt="AI-powered SaaS Dashboard"
-              fill className="rounded-3xl object-cover"
+              fill className="rounded-3xl "
               priority
             />
             <div className="absolute bottom-0 left-0 h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
@@ -158,7 +158,7 @@ const HeroSection = () => {
           </motion.h2>
 
           <motion.p
-            className="text-gray-600 dark:text-gray-300 text-xl max-w-2xl mx-auto mb-8"
+            className="text-neutral-800 dark:text-neutral-400 text-xl max-w-2xl mx-auto mb-8"
             variants={itemVariants}
           >
             Join thousands of satisfied users who have transformed their workflows with our AI-powered SaaS solution.

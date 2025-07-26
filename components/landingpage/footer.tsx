@@ -66,133 +66,134 @@ const linkVariants = {
 
 export default function Footer() {
   return (
-    <footer className="relative border-b bg-white dark:bg-black dark:text-gray-100 text-gray-900 overflow-hidden">
-      {/* Background watermark */}
-      <div className=" inset-0 flex items-center justify-center ">
+    <div>
+      {/* <div className="inset-0 flex items-center justify-center ">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.03, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }} // set opacity to 1
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="text-[20rem] font-bold dark:text-gray-100 text-zinc-900"
-          style={{ lineHeight: 1, opacity: 0.1 }}
+          className="text-[18rem] font-bold  dark:text-neutral-900 text-gray-100 "
+          style={{ lineHeight: 1 }} // remove opacity from style
         >
           Syntax
         </motion.div>
-      </div>
+      </div> */}
+      <footer className="relative border-b bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
 
-      <motion.div
-        variants={containerVariants}
-        whileInView="visible"
-        className="relative z-10 max-w-7xl mx-auto px-6 py-16"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
-          <motion.div variants={itemVariants} className="lg:col-span-2">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="flex items-center space-x-3 mb-6"
-            >
-              <div className="w-10 h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
-                S
-              </div>
-              <span className="text-2xl font-bold">Syntax</span>
+        <motion.div
+          variants={containerVariants}
+          whileInView="visible"
+          className="relative z-10 max-w-7xl mx-auto px-6 py-16"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
+            <motion.div variants={itemVariants} className="lg:col-span-2">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="flex items-center space-x-3 mb-6"
+              >
+                <div className="w-10 h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
+                  S
+                </div>
+                <span className="text-2xl font-bold">Syntax</span>
+              </motion.div>
+              <motion.p variants={linkVariants} className="text-gray-400 text-sm leading-relaxed">
+                © copyright Syntaxs 2024. All rights reserved.
+              </motion.p>
             </motion.div>
-            <motion.p variants={linkVariants} className="text-gray-400 text-sm leading-relaxed">
-              © copyright Syntaxs 2024. All rights reserved.
-            </motion.p>
-          </motion.div>
 
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Pages</h3>
-            <ul className="space-y-3">
-              {footerLinks.pages.map((link, index) => (
-                <motion.li
-                  key={link.name}
-                  variants={linkVariants}
-                  custom={index}
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <Link
-                    href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+            <motion.div variants={itemVariants} className="space-y-4">
+              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Pages</h3>
+              <ul className="space-y-3">
+                {footerLinks.pages.map((link, index) => (
+                  <motion.li
+                    key={link.name}
+                    variants={linkVariants}
+                    custom={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    {link.name}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+                    <Link
+                      href={link.href}
+                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
 
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Socials</h3>
-            <ul className="space-y-3">
-              {footerLinks.socials.map((link, index) => (
-                <motion.li
-                  key={link.name}
-                  variants={linkVariants}
-                  custom={index}
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <Link
-                    href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500  transition-colors duration-200 text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
+            <motion.div variants={itemVariants} className="space-y-4">
+              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Socials</h3>
+              <ul className="space-y-3">
+                {footerLinks.socials.map((link, index) => (
+                  <motion.li
+                    key={link.name}
+                    variants={linkVariants}
+                    custom={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    {link.name}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+                    <Link
+                      href={link.href}
+                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500  transition-colors duration-200 text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
 
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Legal</h3>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link, index) => (
-                <motion.li
-                  key={link.name}
-                  variants={linkVariants}
-                  custom={index}
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <Link
-                    href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+            <motion.div variants={itemVariants} className="space-y-4">
+              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Legal</h3>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link, index) => (
+                  <motion.li
+                    key={link.name}
+                    variants={linkVariants}
+                    custom={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    {link.name}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+                    <Link
+                      href={link.href}
+                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
 
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Register</h3>
-            <ul className="space-y-3">
-              {footerLinks.register.map((link, index) => (
-                <motion.li
-                  key={link.name}
-                  variants={linkVariants}
-                  custom={index}
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <Link
-                    href={link.href}
-                    className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+            <motion.div variants={itemVariants} className="space-y-4">
+              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Register</h3>
+              <ul className="space-y-3">
+                {footerLinks.register.map((link, index) => (
+                  <motion.li
+                    key={link.name}
+                    variants={linkVariants}
+                    custom={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    {link.name}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-      </motion.div>
-    </footer>
+                    <Link
+                      href={link.href}
+                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+      </footer>
+    </div>
   )
 }
