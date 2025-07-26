@@ -52,9 +52,7 @@ const HeroSection = () => {
             </motion.p>
             <motion.div className="flex justify-center items-center gap-4" variants={itemVariants}>
               <motion.button
-                className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="bg-amber-600  text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25"
               >
                 Start Free Trial
               </motion.button>
@@ -97,7 +95,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative"
         >
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1150px] h-[100px] bg-amber-600 blur-[100px] -z-10" />
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1150px] h-[100px] bg-orange-500 blur-[100px] -z-15" />
           <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60  backdrop-blur-md mx-auto mt-8 overflow-hidden">
             <Image src="/l.webp"
               alt="AI-powered SaaS Dashboard"

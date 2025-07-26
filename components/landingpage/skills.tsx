@@ -8,7 +8,6 @@ import {
   IconBrandAdobe,
   IconBrandBlackberry
 } from "@tabler/icons-react";
-import { SiExpress, SiMongodb } from "react-icons/si";
 
 const reviews = [
   {
