@@ -88,7 +88,6 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <motion.div
-                whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="flex items-center space-x-3 mb-6"
               >

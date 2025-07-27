@@ -68,8 +68,8 @@ export default function PricingPage() {
             >
               <Card
                 className={`h-full ${plan.featured
-                  ? "border-6 border-orange-400 shadow-2xl bg-white dark:bg-gray-900"
-                  : "border-3 border-gray-600 shadow-lg bg-white dark:bg-gray-900"} rounded-4xl transition-transform duration-300"
+                  ? "border-6 border-orange-400 shadow-2xl bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 dark:from-neutral-800 dark:via-neutral-800 dark:to-neutral-900"
+                  : "border-3 border-neutral-600 shadow-lg bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 dark:from-neutral-800 dark:via-neutral-800 dark:to-neutral-900"} rounded-4xl transition-transform duration-300"
                   }`}
               >
                 <CardHeader className="text-center pb-4">
@@ -79,7 +79,7 @@ export default function PricingPage() {
                     <span className="text-gray-600 dark:text-gray-100 ml-1">/month</span>
                   </div>
                   <Button
-                    className="w-full bg-gray-800 dark:bg-gray-700  hover:bg-gray-900 text-white py-3 text-base font-medium"
+                    className="w-full bg-gray-800 dark:bg-neutral-700  hover:bg-gray-900 text-white py-3 text-base font-medium"
                     size="lg"
                   >
                     Get Started

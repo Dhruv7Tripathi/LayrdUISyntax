@@ -132,7 +132,7 @@ const HeroSection = () => {
       >
         {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1200px] h-[10px] bg-amber-600 blur-[10px] z-5" /> */}
 
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900 rounded-2xl pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 dark:from-neutral-800 dark:via-neutral-800 dark:to-neutral-900 rounded-2xl pointer-events-none z-0" />
 
         <div className="w-full flex flex-col items-center justify-center relative z-10 text-center">
           <motion.h2
