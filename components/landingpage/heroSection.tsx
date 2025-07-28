@@ -123,8 +123,11 @@ const HeroSection = () => {
       </motion.div>
       <Process />
 
+
+      <PricingPage />
+      <FAQSection />
       <motion.section
-        className="px-6 py-12 rounded-2xl mb-12 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
+        className="px-6 py-12 rounded-2xl h-[400px] mb-24 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -183,9 +186,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </motion.section>
-
-      <PricingPage />
-      <FAQSection />
       <Footer />
     </div>
   )

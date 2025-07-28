@@ -78,7 +78,7 @@ export default function Footer() {
           Syntax
         </motion.div>
       </div> */}
-      <footer className="relative border-b bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
+      <footer className="relative border-b  bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
 
         <motion.div
           variants={containerVariants}

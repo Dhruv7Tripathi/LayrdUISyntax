@@ -67,7 +67,7 @@ export const FAQSection = () => {
   }
 
   return (
-    <section className="dark:bg-black bg-white text-gray-900 dark:text-white py-20 px-6 sm:px-12">
+    <section className="dark:bg-black min-h-screen bg-white flex justify-center items-center text-gray-900 dark:text-white py-20 px-6 sm:px-12">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         <div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
