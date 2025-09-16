@@ -1,4 +1,4 @@
-import { ContainerScroll, CardSticky } from "@/components/cards-stack"
+import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack"
 
 const PROCESS_PHASES = [
   {

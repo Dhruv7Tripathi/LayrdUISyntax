@@ -9,6 +9,8 @@ import { FAQSection } from "./faq"
 import { Process } from "./testimonial"
 import { ChevronRight } from 'lucide-react';
 import { Button } from "../ui/button"
+import CTA from "./cta"
+
 const HeroSection = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -33,38 +35,44 @@ const HeroSection = () => {
       <Navbar />
       <div className="relative z-20">
         <motion.section
-          className="flex items-center justify-center mt-28 mb-28 text-black dark:text-white"
+          className="flex items-center justify-center mt-16 md:mt-28 mb-16 md:mb-28 text-black dark:text-white px-4"
           initial="hidden"
           animate="visible"
         >
-          <div className="max-w-7xl mx-auto text-center space-y-6 px-4">
-            <motion.h1 className="text-4xl md:text-7xl font-sans font-bold" variants={itemVariants}>
+          <div className="max-w-7xl mx-auto text-center space-y-6">
+            <motion.h1
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-tight"
+              variants={itemVariants}
+            >
               Optimize Your Workflow
               <br />
               with Cutting-Edge Solutions
             </motion.h1>
             <motion.p
-              className="max-w-4xl mx-auto font-medium text-zinc-700 dark:text-neutral-500 md:text-xl"
+              className="max-w-4xl mx-auto font-medium text-zinc-700 dark:text-neutral-500 text-base md:text-lg lg:text-xl px-2"
               variants={itemVariants}
             >
               Meet our AI-powered SaaS solution to lighten your workload, increase efficiency and make more accurate
               decisions.
             </motion.p>
-            <motion.div className="flex justify-center items-center gap-4" variants={itemVariants}>
+            <motion.div
+              className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4"
+              variants={itemVariants}
+            >
               <motion.button
-                className="bg-amber-600  text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25"
+                className="bg-amber-600 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25 w-full sm:w-auto"
               >
                 Start Free Trial
               </motion.button>
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="w-full sm:w-auto"
               >
                 <Button
                   size="lg"
                   className="text-base w-full sm:w-auto bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
                 >
-                  {/* <Link href="#demo" className="flex items-center"> */}
                   Start a Demo
                   <motion.span
                     whileHover={{ x: 4 }}
@@ -72,18 +80,23 @@ const HeroSection = () => {
                   >
                     <ChevronRight className="ml-2 size-4 text-amber-400 transition-transform group-hover:translate-x-1" />
                   </motion.span>
-                  {/* </Link> */}
                 </Button>
               </motion.div>
             </motion.div>
             <motion.div
-              className="m-4 p-4 bottom-4 w-full z-20 text-center text-sm text-gray-800 dark:text-gray-200"
+              className="m-4 p-4 bottom-4 w-full z-20 text-center text-xs sm:text-sm text-gray-800 dark:text-gray-200"
               variants={itemVariants}
             >
-              <p className="flex justify-center gap-4">
-                <span className="text-amber-400">✓</span> No credit card
-                <span className="text-amber-400">✓</span> 14-day trial
-                <span className="text-amber-400">✓</span> Cancel anytime
+              <p className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
+                <span className="flex items-center gap-1">
+                  <span className="text-amber-400">✓</span> No credit card
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="text-amber-400">✓</span> 14-day trial
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="text-amber-400">✓</span> Cancel anytime
+                </span>
               </p>
             </motion.div>
           </div>
@@ -93,27 +106,26 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="relative"
+          className="relative px-4"
         >
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1150px] h-[100px] bg-orange-500 blur-[100px] -z-15" />
-          <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60  backdrop-blur-md mx-auto mt-8 overflow-hidden">
-            <Image src="/l.webp"
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1150px] h-[50px] sm:h-[100px] bg-orange-500 blur-[50px] sm:blur-[100px] -z-15" />
+          <div className="relative z-10 rounded-2xl w-full max-w-[1300px] h-[300px] sm:h-[500px] md:h-[600px] lg:h-[800px] bg-neutral-900/60 backdrop-blur-md mx-auto mt-8 overflow-hidden">
+            <Image
+              src="/l.webp"
               alt="AI-powered SaaS Dashboard"
-              fill className="rounded-3xl "
+              fill
+              className="rounded-3xl object-cover"
               priority
             />
-            <div className="absolute bottom-0 left-0 h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
+            <div className="absolute bottom-0 left-0 h-[200px] sm:h-[300px] md:h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
           </div>
-
-
         </motion.div>
 
         <div className="opacity-10 mb-5" />
       </div>
 
-
       <motion.div
-        className="mt-16 p-12 mb-24 opacity-55"
+        className="mt-8 md:mt-16 p-4 md:p-12 mb-12 md:mb-24 opacity-55"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.55 }}
         viewport={{ once: true }}
@@ -121,71 +133,21 @@ const HeroSection = () => {
       >
         <Skills />
       </motion.div>
+
       <Process />
-
-
       <PricingPage />
       <FAQSection />
+
       <motion.section
-        className="px-6 py-12 rounded-2xl h-[400px] mb-24 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
+        className="min-h-screen max-w-9xl px-4 md:px-8 lg:ml-24 lg:mr-24"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={sectionVariants}
       >
-        {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1200px] h-[10px] bg-amber-600 blur-[10px] z-5" /> */}
-
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 dark:from-neutral-800 dark:via-neutral-800 dark:to-neutral-900 rounded-2xl pointer-events-none z-0" />
-
-        <div className="w-full flex flex-col items-center justify-center relative z-10 text-center">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight mb-6"
-            variants={itemVariants}
-          >
-            Ready to take your project to the{" "}
-            <span className="text-orange-400 font-serif relative inline-block">
-              next level
-              <motion.div
-                className="absolute -inset-2 bg-orange-400/20 blur-lg rounded-lg -z-10"
-                animate={{ opacity: [0.2, 0.4, 0.2] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </span>
-            ?
-          </motion.h2>
-
-          <motion.p
-            className="text-neutral-800 dark:text-neutral-400 text-xl max-w-2xl mx-auto mb-8"
-            variants={itemVariants}
-          >
-            Join thousands of satisfied users who have transformed their workflows with our AI-powered SaaS solution.
-          </motion.p>
-
-          <motion.div
-            className="flex flex-wrap justify-center items-center gap-6"
-            variants={itemVariants}
-          >
-            <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full  transition duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Us
-            </motion.button>
-            <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full  duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More
-            </motion.button>
-          </motion.div>
-        </div>
+        <CTA />
       </motion.section>
+
       <Footer />
     </div>
   )
