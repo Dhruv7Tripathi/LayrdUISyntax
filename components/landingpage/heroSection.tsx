@@ -49,11 +49,12 @@ const HeroSection = () => {
               with Cutting-Edge Solutions
             </motion.h1>
             <motion.p
-              className="max-w-4xl mx-auto font-medium text-zinc-700 dark:text-neutral-500 text-base md:text-lg lg:text-xl px-2"
+              className="max-w-3xl mx-auto font-medium text-neutral-700 dark:text-neutral-400 text-base md:text-lg lg:text-xl px-2"
               variants={itemVariants}
             >
-              Meet our AI-powered SaaS solution to lighten your workload, increase efficiency and make more accurate
-              decisions.
+              Meet our AI-powered SaaS solution to lighten your workload, increase efficiency, and make more accurate decisions.
+
+              Streamline your business processes with intelligent automation and actionable insights.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4"
@@ -65,7 +66,7 @@ const HeroSection = () => {
                 Start Free Trial
               </motion.button>
               <motion.div
-                whileHover={{ scale: 1.03 }}
+                // whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 className="w-full sm:w-auto"
               >
@@ -78,7 +79,7 @@ const HeroSection = () => {
                     whileHover={{ x: 4 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    <ChevronRight className="ml-2 size-4 text-amber-400 transition-transform group-hover:translate-x-1" />
+                    <ChevronRight className="ml-2 mt-1 size-4 text-amber-400 transition-transform group-hover:translate-x-1" />
                   </motion.span>
                 </Button>
               </motion.div>
@@ -139,7 +140,7 @@ const HeroSection = () => {
       <FAQSection />
 
       <motion.section
-        className="min-h-screen max-w-9xl px-4 md:px-8 lg:ml-24 lg:mr-24"
+        className="min-h-screen max-w-9xl  "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}

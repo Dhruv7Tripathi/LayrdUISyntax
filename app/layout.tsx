@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PortFolio",
-  description: "Created for showcasing my work and skills",
+  title: "LayrdUI - Syntax Template",
+  description: "A modern, responsive, and customizable UI template built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({

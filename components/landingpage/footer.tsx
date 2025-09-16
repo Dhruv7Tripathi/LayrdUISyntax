@@ -30,7 +30,7 @@ const footerLinks = {
 }
 
 const containerVariants = {
-
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
@@ -47,7 +47,6 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      // ease: "easeOut",
     },
   },
 }
@@ -59,7 +58,6 @@ const linkVariants = {
     x: 0,
     transition: {
       duration: 0.4,
-      // ease: "easeOut",
     },
   },
 }
@@ -67,130 +65,153 @@ const linkVariants = {
 export default function Footer() {
   return (
     <div>
-      {/* <div className="inset-0 flex items-center justify-center ">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }} // set opacity to 1
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="text-[18rem] font-bold  dark:text-neutral-900 text-gray-100 "
-          style={{ lineHeight: 1 }} // remove opacity from style
-        >
-          Syntax
-        </motion.div>
-      </div> */}
-      <footer className="relative border-b  bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
-
+      <footer className="relative border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
         <motion.div
           variants={containerVariants}
+          initial="hidden"
           whileInView="visible"
-          className="relative z-10 max-w-7xl mx-auto px-6 py-16"
+          viewport={{ once: true, margin: "-100px" }}
+          className="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
-            <motion.div variants={itemVariants} className="lg:col-span-2">
+          {/* Mobile: Single column, Desktop: Multi-column grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-12">
+
+            {/* Brand Section - Takes full width on mobile, 2 columns on desktop */}
+            <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-2 mb-6 sm:mb-0">
               <motion.div
+                whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="flex items-center space-x-3 mb-6"
+                className="flex items-center space-x-3 mb-4 sm:mb-6"
               >
-                <div className="w-10 h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-lg sm:text-xl border border-neutral-300 dark:border-neutral-700">
                   S
                 </div>
-                <span className="text-2xl font-bold">Syntax</span>
+                <span className="text-xl sm:text-2xl font-bold">Syntax</span>
               </motion.div>
-              <motion.p variants={linkVariants} className="text-gray-400 text-sm leading-relaxed">
-                © copyright Syntaxs 2024. All rights reserved.
+              <motion.p variants={linkVariants} className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+                Empowering businesses with cutting-edge solutions and innovative technology.
+              </motion.p>
+              <motion.p variants={linkVariants} className="text-gray-400 dark:text-gray-500 text-xs mt-3">
+                © 2024 Syntax. All rights reserved.
               </motion.p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Pages</h3>
-              <ul className="space-y-3">
-                {footerLinks.pages.map((link, index) => (
-                  <motion.li
-                    key={link.name}
-                    variants={linkVariants}
-                    custom={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <Link
-                      href={link.href}
-                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+            <div className="lg:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
 
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Socials</h3>
-              <ul className="space-y-3">
-                {footerLinks.socials.map((link, index) => (
-                  <motion.li
-                    key={link.name}
-                    variants={linkVariants}
-                    custom={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <Link
-                      href={link.href}
-                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500  transition-colors duration-200 text-sm"
-                      target="_blank"
-                      rel="noopener noreferrer"
+              <motion.div variants={itemVariants} className="space-y-3 sm:space-y-4">
+                <h3 className="text-base sm:text-lg font-semibold dark:text-gray-100 text-gray-900 mb-2 sm:mb-3">
+                  Pages
+                </h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks.pages.map((link, index) => (
+                    <motion.li
+                      key={link.name}
+                      variants={linkVariants}
+                      custom={index}
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+                      <Link
+                        href={link.href}
+                        className="text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200 text-xs sm:text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Legal</h3>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link, index) => (
-                  <motion.li
-                    key={link.name}
-                    variants={linkVariants}
-                    custom={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <Link
-                      href={link.href}
-                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+              {/* Socials Section */}
+              <motion.div variants={itemVariants} className="space-y-3 sm:space-y-4">
+                <h3 className="text-base sm:text-lg font-semibold dark:text-gray-100 text-gray-900 mb-2 sm:mb-3">
+                  Connect
+                </h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks.socials.map((link, index) => (
+                    <motion.li
+                      key={link.name}
+                      variants={linkVariants}
+                      custom={index}
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+                      <Link
+                        href={link.href}
+                        className="text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200 text-xs sm:text-sm block py-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-lg font-semibold dark:text-gray-100 text-gray-900">Register</h3>
-              <ul className="space-y-3">
-                {footerLinks.register.map((link, index) => (
-                  <motion.li
-                    key={link.name}
-                    variants={linkVariants}
-                    custom={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <Link
-                      href={link.href}
-                      className="text-gray-700 dark:text-gray-100 dark:hover:text-amber-500 hover:text-amber-500 transition-colors duration-200 text-sm"
+              {/* Legal Section */}
+              <motion.div variants={itemVariants} className="space-y-3 sm:space-y-4">
+                <h3 className="text-base sm:text-lg font-semibold dark:text-gray-100 text-gray-900 mb-2 sm:mb-3">
+                  Legal
+                </h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks.legal.map((link, index) => (
+                    <motion.li
+                      key={link.name}
+                      variants={linkVariants}
+                      custom={index}
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+                      <Link
+                        href={link.href}
+                        className="text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200 text-xs sm:text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Register Section */}
+              <motion.div variants={itemVariants} className="space-y-3 sm:space-y-4">
+                <h3 className="text-base sm:text-lg font-semibold dark:text-gray-100 text-gray-900 mb-2 sm:mb-3">
+                  Account
+                </h3>
+                <ul className="space-y-2 sm:space-y-3">
+                  {footerLinks.register.map((link, index) => (
+                    <motion.li
+                      key={link.name}
+                      variants={linkVariants}
+                      custom={index}
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    >
+                      <Link
+                        href={link.href}
+                        className="text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200 text-xs sm:text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
           </div>
+
+          {/* Bottom Border - Mobile only */}
+          <motion.div
+            variants={itemVariants}
+            className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800 sm:hidden"
+          >
+            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+              <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
+                Made with ❤️ for better web experiences
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </footer>
     </div>
