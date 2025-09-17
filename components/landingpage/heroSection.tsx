@@ -61,7 +61,7 @@ const HeroSection = () => {
               variants={itemVariants}
             >
               <motion.button
-                className="bg-amber-600 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25 w-full sm:w-auto"
+                className="bg-amber-600 text-white px-6 py-2 font-semibold rounded-lg transition duration-300 shadow-lg shadow-amber-500/25 w-full sm:w-auto"
               >
                 Start Free Trial
               </motion.button>

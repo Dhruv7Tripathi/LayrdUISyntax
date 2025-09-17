@@ -6,6 +6,8 @@ import { cn } from '@/lib/utils';
 import { Themetoggle } from '../ui/themetoggle';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '../ui/button';
+import { SiGithub } from 'react-icons/si';
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,7 +44,7 @@ export const Navbar = () => {
     <>
       <nav
         className={cn(
-          "w-full transition-all sticky top-0 z-50 duration-300",
+          "w-full transition-all  z-50 duration-300",
           isScrolled
             ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-neutral-900/40 shadow-lg backdrop-blur-md"
             : "border-transparent bg-transparent shadow-none backdrop-blur-none",
@@ -72,12 +74,13 @@ export const Navbar = () => {
             <a href="#contact" className="hover:text-orange-400 transition-colors">Contact</a>
           </div>
 
-          <div className='hidden lg:flex items-center space-x-4'>
+          <div className='hidden lg:flex items-center space-x-3'>
             <Themetoggle />
-            <button className='dark:hover:bg-neutral-900 hover:bg-neutral-200 rounded-full py-2 px-4 transition-colors'>
+            <SiGithub size={22} />
+            <button className='dark:hover:bg-neutral-900 hover:bg-neutral-200 rounded-lg py-2 px-2 transition-colors'>
               Login
             </button>
-            <button className='bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors'>
+            <button className='bg-orange-500 font-semibold text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors'>
               Sign Up
             </button>
           </div>
@@ -173,12 +176,12 @@ export const Navbar = () => {
 
               {/* Mobile Menu Footer - Auth Buttons */}
               <div className="p-4 border-t border-neutral-200 dark:border-neutral-800 space-y-3">
-                <button
+                <Button
                   className='w-full dark:hover:bg-neutral-900 hover:bg-neutral-200 border border-neutral-300 dark:border-neutral-700 rounded-full py-3 px-4 transition-colors font-medium'
                   onClick={handleMobileMenuClick}
                 >
                   Login
-                </button>
+                </Button>
                 <button
                   className='w-full bg-orange-500 text-white px-4 py-3 rounded-full hover:bg-orange-600 transition-colors font-medium'
                   onClick={handleMobileMenuClick}

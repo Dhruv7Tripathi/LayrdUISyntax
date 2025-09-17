@@ -209,4 +209,3 @@ export default function Footer() {
     </footer>
   );
 }
-import { useState, useEffect } from 'react';
