@@ -35,12 +35,12 @@ const PROCESS_PHASES = [
 
 const Process = () => {
   return (
-    <div className="container min-h-svh place-content-center bg-white dark:bg-black dark:text-gray-100 text-gray-900 px-4 sm:px-6 md:px-8 xl:px-12">
+    <div className="container  min-h-svh place-content-center bg-white dark:bg-black dark:text-gray-100 text-gray-900 px-4 sm:px-6 md:px-8 xl:px-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 xl:gap-12">
         {/* Header Section - Mobile: Full width, Desktop: Sticky left column */}
-        <div className="md:sticky md:top-1/2 md:-translate-y-1/2 md:self-start">
-          <div className="text-center md:text-left mb-8 md:mb-0">
-            <h2 className="mb-4 md:mb-6 mt-8 md:mt-24 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+        <div className="md:sticky mt-24  md:top-1/2 md:-translate-y-1/2 md:self-start">
+          <div className="text-center mt-12 md:text-left mb-8 md:mb-0">
+            <h2 className="mb-4 md:mb-6  md:mt-24 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
               Planning your{" "}
               <span className="text-orange-400 font-serif block sm:inline">
                 Project Development
@@ -48,7 +48,7 @@ const Process = () => {
               <span className="hidden sm:inline">journey</span>
               <span className="block sm:hidden">journey</span>
             </h2>
-            <p className="max-w-prose mx-auto md:mx-0 text-sm sm:text-base md:text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+            <p className="max-w-prose mx-auto md:mx-0 text-sm sm:text-base md:text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
               Our journey begins with a deep dive into your vision. In the
               Discovery phase, we engage in meaningful conversations to grasp your
               brand identity, goals, and the essence you want to convey. This
@@ -92,8 +92,8 @@ const Process = () => {
                       <div
                         key={i}
                         className={`w-2 h-2 rounded-full transition-colors ${i <= index
-                            ? 'bg-orange-400'
-                            : 'bg-neutral-300 dark:bg-neutral-600'
+                          ? 'bg-orange-400'
+                          : 'bg-neutral-300 dark:bg-neutral-600'
                           }`}
                       />
                     ))}

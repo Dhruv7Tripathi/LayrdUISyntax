@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const footerLinks = {
   pages: [
-    { name: "All Products", href: "/products" },
-    { name: "Studio", href: "/studio" },
-    { name: "Clients", href: "/clients" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Blog", href: "/blog" },
+    { name: "All Products", href: "/#" },
+    { name: "Studio", href: "/#" },
+    { name: "Clients", href: "/#" },
+    { name: "Pricing", href: "/#" },
+    { name: "Blog", href: "/#" },
   ],
   socials: [
     { name: "Facebook", href: "https://facebook.com" },
@@ -19,14 +19,14 @@ const footerLinks = {
     { name: "LinkedIn", href: "https://linkedin.com" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Privacy Policy", href: "/#" },
+    { name: "Terms of Service", href: "/#" },
+    { name: "Cookie Policy", href: "/#" },
   ],
   register: [
-    { name: "Sign Up", href: "/signup" },
-    { name: "Login", href: "/login" },
-    { name: "Forgot Password", href: "/forgot-password" },
+    { name: "Sign Up", href: "/#" },
+    { name: "Login", href: "/#" },
+    { name: "Forgot Password", href: "/#" },
   ],
 };
 

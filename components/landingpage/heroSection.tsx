@@ -134,8 +134,10 @@ const HeroSection = () => {
       >
         <Skills />
       </motion.div>
+      <div className="mt-16 md:mt-28 mb-16 md:mb-28 relative z-10">
 
-      <Process />
+        <Process />
+      </div>
       <PricingPage />
       <FAQSection />
 

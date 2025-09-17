@@ -7,12 +7,12 @@ export default function CTA() {
       <div className='text-center bg-neutral-50 dark:bg-neutral-950 justify-center w-full max-w-8xl rounded-xl p-6 sm:p-8 md:p-12 border border-dashed border-neutral-200 dark:border-neutral-800 flex flex-col items-center mx-auto'>
 
         <h2 className="bg-gradient-stop mx-auto max-w-6xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 px-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tighter text-transparent">
-          Ready to get started?
+          Ready to get started ?
         </h2>
 
         <p className="mt-4 md:mt-6 mb-6 sm:mb-8 max-w-xl text-center text-neutral-800 dark:text-neutral-200 text-sm sm:text-base md:text-lg leading-relaxed px-2">
           Join thousands of users who&apos;ve already boosted their productivity with our tools.
-          Whether you&apos;re managing tasks or planning big projects — we&apos;ve got you covered.
+          Whether you&apos;re managing tasks or planning big projects .
           Sign up now and take control of your time.
         </p>
 

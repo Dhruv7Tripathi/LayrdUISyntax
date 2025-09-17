@@ -48,14 +48,15 @@ export default function PricingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#0c0c0] py-12 px-4">
+    <div className="min-h-screen mt-12 bg-[#0c0c0] py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-100 text-gray-900 mb-4">
-            <span className="text-orange-500">Simple</span> Pricing for Everyone
+            Simple Pricing for {" "}
+            <span className="text-orange-500">EveryOne</span>
           </h1>
-          <p className="text-gray-950 dark:text-gray-100 text-lg max-w-2xl mx-auto">
+          <p className="text-neutral-950  dark:text-neutral-100 text-sm max-w-xl mx-auto">
             Here, we are going to make the middle one much more attractive than the rest of the pricing tiers so you buy
             what we want you to buy
           </p>
