@@ -15,12 +15,8 @@ interface FAQItemProps {
 const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.2 }}
       className="border-b border-white/10"
-      layout // ✅ smooth outer layout animation
+      layout
     >
       <motion.button
         onClick={onToggle}
@@ -43,11 +39,6 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
         {isOpen && (
           <motion.div
             key="faq-answer"
-            layout
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
             className="overflow-hidden text-sm text-gray-400 pb-4 px-1"
           >
             {answer}

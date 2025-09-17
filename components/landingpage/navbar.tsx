@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Themetoggle } from '../ui/themetoggle';
 import { Menu, X } from 'lucide-react';
-
+import Image from 'next/image';
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +33,6 @@ export const Navbar = () => {
       document.body.style.overflow = 'unset';
     }
 
-    // Cleanup function to reset overflow when component unmounts
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -50,19 +49,22 @@ export const Navbar = () => {
         )}
       >
         <div className="container flex items-center justify-between mx-auto px-4 py-3">
-          {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-1.5"
           >
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-lg md:text-xl">
-              S
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={50}
+              height={30}
+              className="rounded-full mt-1"
+              priority
+              quality={100}
+            />
+
             <span className="text-xl md:text-2xl font-bold">Syntax</span>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex text-gray-800 dark:text-gray-200 text-sm justify-center items-center font-semibold space-x-6 flex-1">
             <a href="#home" className="hover:text-orange-400 transition-colors">Home</a>
             <a href="#about" className="hover:text-orange-400 transition-colors">About</a>
@@ -70,7 +72,6 @@ export const Navbar = () => {
             <a href="#contact" className="hover:text-orange-400 transition-colors">Contact</a>
           </div>
 
-          {/* Desktop Right Side */}
           <div className='hidden lg:flex items-center space-x-4'>
             <Themetoggle />
             <button className='dark:hover:bg-neutral-900 hover:bg-neutral-200 rounded-full py-2 px-4 transition-colors'>
@@ -81,7 +82,6 @@ export const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Right Side */}
           <div className='flex lg:hidden items-center space-x-3'>
             <Themetoggle />
             <button
@@ -99,7 +99,6 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -113,7 +112,6 @@ export const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
