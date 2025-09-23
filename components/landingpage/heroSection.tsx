@@ -1,6 +1,4 @@
 "use client"
-import Footer from "./footer"
-import { Navbar } from "./navbar"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { Skills } from "./skills"
@@ -32,14 +30,14 @@ const HeroSection = () => {
 
   return (
     <div className="bg-white dark:bg-black dark:text-gray-100 text-gray-900 relative">
-      <Navbar />
+
       <div className="relative z-20">
         <motion.section
-          className="flex items-center justify-center mt-16 md:mt-28 mb-16 md:mb-28 text-black dark:text-white px-4"
+          className="flex items-center justify-center mb-16 md:mb-28 text-black dark:text-white px-4"
           initial="hidden"
           animate="visible"
         >
-          <div className="max-w-7xl mx-auto text-center space-y-6">
+          <div className="max-w-7xl justify-center md:mt-28 mx-auto text-center space-y-6">
             <motion.h1
               className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-tight"
               variants={itemVariants}
@@ -110,12 +108,12 @@ const HeroSection = () => {
           className="relative px-4"
         >
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1150px] h-[50px] sm:h-[100px] bg-orange-500 blur-[50px] sm:blur-[100px] -z-15" />
-          <div className="relative z-10 rounded-2xl w-full max-w-[1300px] h-[300px] sm:h-[500px] md:h-[600px] lg:h-[800px] bg-neutral-900/60 backdrop-blur-md mx-auto mt-8 overflow-hidden">
+          <div className="relative z-10 rounded-lg w-full max-w-[1300px] h-[300px] sm:h-[500px] md:h-[600px] lg:h-[800px] bg-neutral-900/60 backdrop-blur-md mx-auto mt-8 overflow-hidden">
             <Image
-              src="/l.webp"
+              src="/dashboard.png"
               alt="AI-powered SaaS Dashboard"
               fill
-              className="rounded-3xl object-cover"
+              className="rounded-lg"
               priority
             />
             <div className="absolute bottom-0 left-0 h-[200px] sm:h-[300px] md:h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
@@ -151,7 +149,6 @@ const HeroSection = () => {
         <CTA />
       </motion.section>
 
-      <Footer />
     </div>
   )
 }

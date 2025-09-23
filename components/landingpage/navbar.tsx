@@ -29,7 +29,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className={cn("w-full")}>
+      <nav className={cn("w-full bg-white dark:bg-black dark:text-gray-100 text-gray-900")}>
         <div className="container flex items-center justify-between px-4 py-3 mx-auto">
           <div className="flex items-center space-x-2">
             <Image
@@ -44,11 +44,11 @@ export const Navbar = () => {
             <span className="text-xl md:text-2xl font-bold">Syntax</span>
           </div>
 
-          <div className="hidden lg:flex flex-1 justify-center items-center space-x-6 font-semibold text-sm text-gray-800 dark:text-gray-200">
-            <a href="#home" className="hover:text-orange-400 transition-colors">Home</a>
-            <a href="#about" className="hover:text-orange-400 transition-colors">About</a>
-            <a href="#services" className="hover:text-orange-400 transition-colors">Services</a>
-            <a href="#contact" className="hover:text-orange-400 transition-colors">Contact</a>
+          <div className="hidden lg:flex flex-1 justify-center items-center  font-semibold text-sm text-gray-800 dark:text-gray-200">
+            <a href="#home" className="hover:text-black dark:hover:text-white dark:hover:bg-neutral-900 hover:bg-neutral-200 px-4 rounded-lg py-2 transition-colors">Home</a>
+            <a href="#about" className="hover:text-black dark:hover:text-white dark:hover:bg-neutral-900 hover:bg-neutral-200 px-4 rounded-lg py-2 transition-colors">About</a>
+            <a href="#services" className="hover:text-black dark:hover:text-white dark:hover:bg-neutral-900 hover:bg-neutral-200 px-4 rounded-lg py-2 transition-colors">Services</a>
+            <a href="#contact" className="hover:text-black dark:hover:text-white dark:hover:bg-neutral-900 hover:bg-neutral-200 px-4 rounded-lg py-2 transition-colors">Contact</a>
           </div>
 
           <div className="hidden lg:flex items-center space-x-3">
@@ -67,7 +67,7 @@ export const Navbar = () => {
 
           <div className="flex lg:hidden items-center space-x-3">
             <Themetoggle />
-            <SiGithub size={22} className="text-gray-800 dark:text-gray-200" />
+            <SiGithub size={22} className="text-gray-800 dark:text-gray-200 dark:hover:bg-neutral-900 hover:bg-neutral-200 px-4 rounded-lg py-2" />
             <button
               onClick={toggleMobileMenu}
               className="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
