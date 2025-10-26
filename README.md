@@ -7,14 +7,13 @@ It provides a clean, scalable foundation for building SaaS apps, landing pages, 
 
 ## 🚀 Features
 
-- ⚡ **Next.js (App Router)** — Fast, modern React framework with SSR & ISR
+- ⚡ **Next.js (App Router)** — Fast, modern React framework
 - 🧩 **LayrdUI Components** — Pre-built, accessible, and elegant UI components
 - 💅 **Tailwind CSS** — Utility-first CSS framework for rapid styling
 - 🔒 **TypeScript** — Type-safe and developer-friendly
 - 🌗 **Dark Mode Ready** — Built-in theme toggle
 - 🧠 **SEO Optimized** — Metadata setup with Open Graph and Twitter tags
 - 🧰 **Reusable Components** — Navbar, Hero, Pricing, FAQ, Testimonials, Footer, and more
-- 🧑‍💻 **Developer Experience** — ESLint + Prettier + Folder conventions included
 
 ---
 
@@ -22,12 +21,11 @@ It provides a clean, scalable foundation for building SaaS apps, landing pages, 
 
 ### 1️⃣ Clone the Repository
 
-````bash
-git clone https://github.com/LayrdUI/syntax.git
+```bash
+git clone https://github.com/Dhruv7Tripathi/LayrdUISyntax.git
 cd syntax
 npm install
 
 npm run dev
 
-```bash
-````
+```
