@@ -6,10 +6,10 @@ import PricingPage from "./pricing"
 import { FAQSection } from "./faq"
 import { Process } from "./testimonial"
 import { ChevronRight } from 'lucide-react';
-import { Button } from "../ui/button"
+import { Button } from "./ui/button"
 import CTA from "./cta"
 
-const HeroSection = () => {
+const LandingPage = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -153,4 +153,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default LandingPage

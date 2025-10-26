@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
-import Footer from "@/components/landingpage/footer";
-import { Navbar } from "@/components/landingpage/navbar";
+import Footer from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,15 +30,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Dhruv", url: "https://dhruvtripathi.in" }],
   creator: "Dhruv",
-  metadataBase: new URL("https://layrdui.com"), // Change to your domain
+  metadataBase: new URL("https://layrd-ui-syntax.vercel.app"), // Change to your domain
   openGraph: {
     title: "LayrdUI - Modern UI Template",
     description: "Responsive, accessible UI components powered by Next.js and Tailwind.",
-    url: "https://layrdui.com",
+    url: "https://layrd-ui-syntax.vercel.app",
     siteName: "LayrdUI",
     images: [
       {
-        url: "https://layrdui.com/og-image.png", // Add a real OG image
+        url: "https://layrd-ui-syntax.vercel.app/og-image.png", // Add a real OG image
         width: 1200,
         height: 630,
         alt: "LayrdUI - Syntax Template",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LayrdUI - Syntax Template",
     description: "A modern, responsive, and customizable UI template built with Next.js and Tailwind CSS.",
-    images: ["https://layrdui.com/og-image.png"],
+    images: ["https://layrd-ui-syntax.vercel.app/og-image.png"],
   },
   icons: {
     icon: "/favicon.ico",

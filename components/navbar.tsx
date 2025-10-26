@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Themetoggle } from '../ui/themetoggle';
+import { Themetoggle } from './ui/themetoggle';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
-import { Button } from '../ui/button';
+import { Button } from './ui/button';
 import { SiGithub } from 'react-icons/si';
 
 export const Navbar = () => {
